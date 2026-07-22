@@ -134,14 +134,25 @@ flowchart LR
 
 ---
 
-## GitHub
+## Repositories
 
-<div align="center">
+| Repository | Description | Info |
+|:--|:--|:--|
+| **[rv32i_multi](https://github.com/ethan000106/rv32i_multi)** | RISC-V RV32I 5-stage pipeline core | ![Top Language](https://img.shields.io/github/languages/top/ethan000106/rv32i_multi?style=flat-square&labelColor=1F2937&color=374151) ![Last Commit](https://img.shields.io/github/last-commit/ethan000106/rv32i_multi?style=flat-square&labelColor=1F2937&color=374151) |
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ethan000106&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&theme=tokyonight" alt="GitHub Stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ethan000106&layout=compact&hide_border=true&langs_count=6&theme=tokyonight" alt="Top Languages" />
+<!-- TODO: 아래 형식으로 공개 저장소를 추가하세요. USER/REPO만 바꾸면 배지는 자동으로 갱신됩니다.
 
-</div>
+| **[REPO_NAME](https://github.com/ethan000106/REPO_NAME)** | 한 줄 설명 | ![Top Language](https://img.shields.io/github/languages/top/ethan000106/REPO_NAME?style=flat-square&labelColor=1F2937&color=374151) ![Last Commit](https://img.shields.io/github/last-commit/ethan000106/REPO_NAME?style=flat-square&labelColor=1F2937&color=374151) |
+
+  쓸 만한 다른 배지:
+    저장소 크기   https://img.shields.io/github/repo-size/USER/REPO
+    언어 개수     https://img.shields.io/github/languages/count/USER/REPO
+    라이선스      https://img.shields.io/github/license/USER/REPO
+    스타          https://img.shields.io/github/stars/USER/REPO
+
+  ※ 비공개 저장소는 배지가 뜨지 않습니다(shields.io가 GitHub 공개 API를 사용).
+-->
+
 
 ---
 
