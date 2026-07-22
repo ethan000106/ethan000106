@@ -134,25 +134,27 @@ flowchart LR
 
 ---
 
-## Repositories
+## GitHub
 
-| Repository | Description | Info |
-|:--|:--|:--|
-| **[rv32i_multi](https://github.com/ethan000106/rv32i_multi)** | RISC-V RV32I 5-stage pipeline core | ![Top Language](https://img.shields.io/github/languages/top/ethan000106/rv32i_multi?style=flat-square&labelColor=1F2937&color=374151) ![Last Commit](https://img.shields.io/github/last-commit/ethan000106/rv32i_multi?style=flat-square&labelColor=1F2937&color=374151) |
+<div align="center">
 
-<!-- TODO: 아래 형식으로 공개 저장소를 추가하세요. USER/REPO만 바꾸면 배지는 자동으로 갱신됩니다.
+<img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Calendar" />
 
-| **[REPO_NAME](https://github.com/ethan000106/REPO_NAME)** | 한 줄 설명 | ![Top Language](https://img.shields.io/github/languages/top/ethan000106/REPO_NAME?style=flat-square&labelColor=1F2937&color=374151) ![Last Commit](https://img.shields.io/github/last-commit/ethan000106/REPO_NAME?style=flat-square&labelColor=1F2937&color=374151) |
+</div>
 
-  쓸 만한 다른 배지:
-    저장소 크기   https://img.shields.io/github/repo-size/USER/REPO
-    언어 개수     https://img.shields.io/github/languages/count/USER/REPO
-    라이선스      https://img.shields.io/github/license/USER/REPO
-    스타          https://img.shields.io/github/stars/USER/REPO
+<!-- 이 이미지는 .github/workflows/profile-3d.yml 이 매일 자동 생성해 저장소에 커밋합니다.
+     처음 한 번은 Actions 탭에서 수동 실행해야 파일이 만들어집니다.
+     (실행 전에는 파일이 없으므로 이미지가 깨져 보입니다)
 
-  ※ 비공개 저장소는 배지가 뜨지 않습니다(shields.io가 GitHub 공개 API를 사용).
+     테마를 바꾸려면 위 경로의 파일명만 교체하세요:
+       profile-night-rainbow.svg      ← 현재 (야경 + 무지개 그라데이션)
+       profile-night-view.svg          야경
+       profile-night-green.svg         야경 + 초록
+       profile-gitblock.svg            블록형
+       profile-green.svg  /  profile-green-animate.svg
+       profile-season.svg /  profile-season-animate.svg   (북반구 계절색)
+     ※ -animate 가 붙은 애니메이션 버전은 green / season 계열에만 있습니다.
 -->
-
 
 ---
 
