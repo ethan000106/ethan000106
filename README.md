@@ -4,12 +4,14 @@
 
 **Digital Hardware Engineer** &nbsp;·&nbsp; RTL Design / Verification / FPGA System Integration
 
-<sub>`SystemVerilog` &nbsp;·&nbsp; `UVM` &nbsp;·&nbsp; `RISC-V` &nbsp;·&nbsp; `FPGA` &nbsp;·&nbsp; `Embedded Vision`</sub>
+<h3>Bridging Materials Science and Digital Logic Design</h3>
+
+<sub>`SystemVerilog` &nbsp;·&nbsp; `UVM` &nbsp;·&nbsp; `RISC-V` &nbsp;·&nbsp; `FPGA` &nbsp;·&nbsp; `C`</sub>
 
 <br>
 
 <!-- TODO: 아래 링크를 본인 것으로 교체하세요 (없는 항목은 줄째로 삭제) -->
-<a href="khb030508111@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"></a>
+<a href="mailto:khb030508111@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"></a>
 <a href="https://github.com/ethan000106"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"></a>
 <a href="https://www.linkedin.com/in/your-id"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
 <a href="https://drive.google.com/your-resume-link"><img src="https://img.shields.io/badge/Resume-4B5563?style=flat-square&logo=readthedocs&logoColor=white"></a>
@@ -20,13 +22,12 @@
 
 ## About
 
-```
+```text
+- Advanced Materials Engineering(신소재공학) 전공으로 반도체 물성과 물리적 메커니즘에 대한 깊은 이해를 갖추고 있습니다.
+- 1.5년간의 학부 연구실 경험(접착 소재 연구)을 통해 데이터 분석력과 집요한 논리적 문제 해결 역량을 길렀습니다.
 - 디지털 시스템을 RTL부터 검증, 보드 구동까지 직접 만들어 보는 것을 좋아합니다.
 - FSM 설계, 프로토콜 인터페이스, 타이밍 이슈 디버깅에 관심이 많습니다.
-- "동작한다"에서 멈추지 않고 왜 동작하는지 파형으로 확인하는 편입니다.
-```
-
----
+- "동작한다"에서 멈추지 않고 왜 동작하는지 파형으로 반드시 확인하는 편입니다.
 
 ## What I Can Do
 
