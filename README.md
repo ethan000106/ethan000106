@@ -1,6 +1,6 @@
 <div align="center">
 
-# Ethan
+# KANG HYEBEEN
 
 **Digital Hardware Engineer** &nbsp;·&nbsp; RTL Design / Verification / FPGA System Integration
 
