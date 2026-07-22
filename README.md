@@ -65,7 +65,7 @@
 | Project | Summary | Stack | Result |
 |:--|:--|:--|:--|
 | **FPGA Whack-a-Mole Game** | 2-board FPGA 시스템. UART 패킷 통신 기반 게임 로직 + OV7670 카메라 HSV 색 검출 타격 판정 | `SystemVerilog` `UART` `VGA` `OpenCV` | *TODO: 동작 클럭 / LUT·FF·BRAM 사용률* |
-| **OV7670 Camera Pipeline** | SCCB 초기화 ROM 설계, 프레임 버퍼 → VGA 출력, HSV 색상 검출 모듈 | `SystemVerilog` `SCCB/I2C` `VGA` | *TODO: 해상도 / 프레임레이트* |
+| [**I2C_DESIGN AND UVM VERIFICATION**](https://github.com/ethan000106/I2C_System) | SCCB 초기화 ROM 설계, 프레임 버퍼 → VGA 출력, HSV 색상 검출 모듈 | `SystemVerilog` `SCCB/I2C` `VGA` | *TODO: 해상도 / 프레임레이트* |
 | [**RISC-V RV32I Core**](https://github.com/ethan000106/rv32i_multi) | 5-stage pipeline CPU, hazard detection & forwarding unit 구현 | `SystemVerilog` `RV32I` | *TODO: 최대 동작 주파수 / CPI* |
 | **UVM Verification Env** | Generator–Driver–Monitor–Scoreboard 구조 기반 FSM / 프로토콜 검증 환경 구축 | `UVM` `SystemVerilog` | *TODO: 코드 / 기능 커버리지 %* |
 | **Ultrasonic Distance Module** | HC-SR04 인터페이스 FSM, Q16 고정소수점 거리 연산 | `SystemVerilog` `Basys3` | *TODO: 측정 오차 범위* |
