@@ -66,12 +66,11 @@
 
 | Project | Summary | Stack | Result |
 |:--|:--|:--|:--|
-| **FPGA Whack-a-Mole Game** | 2-board FPGA 시스템. UART 패킷 통신 기반 게임 로직 + OV7670 카메라 HSV 색 검출 타격 판정 | `SystemVerilog` `UART` `VGA` `OpenCV` | *TODO: 동작 클럭 / LUT·FF·BRAM 사용률* |
-| [**I2C_DESIGN AND UVM VERIFICATION**](https://github.com/ethan000106/I2C_System) | SCCB 초기화 ROM 설계, 프레임 버퍼 → VGA 출력, HSV 색상 검출 모듈 | `SystemVerilog` `SCCB/I2C` `VGA` | *TODO: 해상도 / 프레임레이트* |
-| [**SPI_DESIGN AND UVM VERIFICATION**](https://github.com/ethan000106/SPI_System) | SCCB 초기화 ROM 설계, 프레임 버퍼 → VGA 출력, HSV 색상 검출 모듈 | `SystemVerilog` `SCCB/I2C` `VGA` | *TODO: 해상도 / 프레임레이트* |
-| [**RISC-V RV32I Core**](https://github.com/ethan000106/rv32i_multi) | 5-stage pipeline CPU, hazard detection & forwarding unit 구현 | `SystemVerilog` `RV32I` | *TODO: 최대 동작 주파수 / CPI* |
-| **UVM Verification Env** | Generator–Driver–Monitor–Scoreboard 구조 기반 FSM / 프로토콜 검증 환경 구축 | `UVM` `SystemVerilog` | *TODO: 코드 / 기능 커버리지 %* |
-| [**STOPWATCH & WATCH_TEAMPROJECT**](https://github.com/ethan000106/Intergrated-Project) | HC-SR04 인터페이스 FSM, Q16 고정소수점 거리 연산 | `SystemVerilog` `Basys3` | *TODO: 측정 오차 범위* |
+| [**FPGA Whack-a-Mole Game**](https://github.com/ethan000106/team_project_dudeoji) | 2-board FPGA 시스템. UART 패킷 통신 기반 게임 로직 FSM 설계, OV7670 카메라 HSV 색 검출로 타격 판정 구현 | `SystemVerilog` `UART` `VGA` `OpenCV` | *TODO: 동작 클럭 / LUT·FF·BRAM 사용률* |
+| [**I2C Master Design & UVM Verification**](https://github.com/ethan000106/I2C_System) | I2C Master IP 설계(START/STOP·ACK 처리, 클럭 분주). UVM 기반 검증 환경 구축 및 코너 케이스 검증 | `SystemVerilog` `UVM` `I2C` | *TODO: 코드 / 기능 커버리지 %* |
+| [**SPI Master Design & UVM Verification**](https://github.com/ethan000106/SPI_System) | SPI Master IP 설계(4-Mode CPOL/CPHA 지원). UVM 기반 검증 환경 구축 및 랜덤 시나리오 검증 | `SystemVerilog` `UVM` `SPI` | *TODO: 코드 / 기능 커버리지 %* |
+| [**RISC-V RV32I Core**](https://github.com/ethan000106/rv32i_multi) | RV32I 명령어 셋 기반 Multi-Cycle 프로세서 설계. 컨트롤 유닛 FSM 및 데이터패스 구현 | `SystemVerilog` `RV32I` | *TODO: 최대 동작 주파수 / CPI* |
+| [**Integrated Project (Stopwatch & Watch)**](https://github.com/ethan000106/Intergrated-Project) | 스톱워치·시계 모드 통합 시스템 설계. HC-SR04 초음파 인터페이스 FSM 및 Q16 고정소수점 거리 연산 구현 | `SystemVerilog` `Basys3` | *TODO: 측정 오차 범위* |
 
 <!-- TODO
   1) 각 프로젝트 이름에 저장소 링크를 걸어주세요.
