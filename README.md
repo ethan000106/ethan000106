@@ -131,8 +131,8 @@ flowchart LR
 ## Education
 
 <!-- TODO: 학교 / 전공 / 수료 과정 / 자격증을 채워주세요 -->
-- **OOO University** — 신소재공학과 (20XX ~ 20XX)
-- **OOO 과정 수료** — RTL 설계 및 검증 / On-Device AI (20XX)
+- **SUWON University** — 신소재공학과 (2022 ~ 2026)
+- **On_device AI 시스템 반도체 설계 과정 수료** — RTL 설계 및 검증 / On-Device AI (2026)
 
 ---
 
