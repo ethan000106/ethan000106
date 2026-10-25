@@ -67,7 +67,7 @@
 | Project | Summary | Stack | Result |
 |:--|:--|:--|:--|
 | [**RISC-V RV32I Core**](https://github.com/ethan000106/rv32i_multi) | RV32I **Single-Cycle** 프로세서 설계. 컨트롤 유닛과 데이터패스를 분리한 Harvard 구조, 37개 명령어 구현 및 명령어 type별 시뮬레이션 | `SystemVerilog` `RV32I` | C 프로그램(합산)을 시뮬레이션으로 검증 (`sum = 55`) |
-| **RISC-V 5-Stage Pipeline SoC** <br><sub>4인 팀 · 담당: FND</sub> | 5-stage 파이프라인 RV32I 코어 + AMBA APB(GPIO · UART · FND · RAM) SoC. Forwarding · Load-use stall · Branch 처리, Basys 3 구동 | `SystemVerilog` `RV32I` `AMBA APB` `Basys3` | Single-Cycle 대비 **Fmax 51.06 → 91.27 MHz (≈1.79×)**, CPI 1.0 → 1.402, 실효 성능 ≈1.275× |
+| [**RISC-V 5-Stage Pipeline SoC**](https://github.com/ethan000106/rv32i_multi) <br><sub>4인 팀 · 담당: FND</sub> | 5-stage 파이프라인 RV32I 코어 + AMBA APB(GPIO · UART · FND · RAM) SoC. Forwarding · Load-use stall · Branch 처리, Basys 3 구동 | `SystemVerilog` `RV32I` `AMBA APB` `Basys3` | Single-Cycle 대비 **Fmax 51.06 → 91.27 MHz (≈1.79×)**, CPI 1.0 → 1.402, 실효 성능 ≈1.275× |
 
 ### 🔌 Communication IP & Verification
 
@@ -75,8 +75,8 @@
 |:--|:--|:--|:--|
 | [**I2C Master Design & UVM Verification**](https://github.com/ethan000106/I2C_System) | I2C Master IP 설계(START/STOP · ACK 처리, SCL 100 kHz 클럭 분주). UVM 기반 검증 환경 구축 및 Directed / Random 검증 | `SystemVerilog` `UVM` `I2C` | Scoreboard PASS (Error 0), Functional Coverage 40.00% |
 | [**SPI Master Design & UVM Verification**](https://github.com/ethan000106/SPI_System) | SPI Master / Slave IP 설계(4-Mode CPOL/CPHA 지원). UVM 기반 검증 환경 구축 및 Directed / Random 검증 | `SystemVerilog` `UVM` `SPI` | Scoreboard PASS (Error 0), Functional Coverage 59.38% (Random) |
-| **AXI4-Lite SPI / I2C IP on MicroBlaze** <br><sub>2인 팀</sub> | SPI · I2C Master를 AXI4-Lite 슬레이브 IP로 패키징하고 MicroBlaze + AXI Interconnect SoC에 통합. AXI Master/Slave 핸드셰이크 FSM 설계, I2C IP UVM 검증, Basys 3 2-board 구동 | `SystemVerilog` `AXI4-Lite` `MicroBlaze` `UVM` `C` | I2C UVM Directed / Random 모두 PASS (Error 0), Functional Coverage 41.7% / 70.8% |
-| **UART + FIFO Loopback Verification** | `uart_rx → FIFO → uart_tx` 루프백 DUT를 SystemVerilog 클래스 기반 테스트벤치(Generator · Driver · Monitor · Scoreboard)와 SVA(reset · `b_tick`)로 검증 | `SystemVerilog` `SVA` `UART` `FIFO` | 단일 데이터 / 랜덤 / FIFO Full / Assertion 4개 시나리오 확인 |
+| [**AXI4-Lite SPI / I2C IP on MicroBlaze**](https://github.com/ethan000106/I2C_System) <br><sub>2인 팀</sub> | SPI · I2C Master를 AXI4-Lite 슬레이브 IP로 패키징하고 MicroBlaze + AXI Interconnect SoC에 통합. AXI Master/Slave 핸드셰이크 FSM 설계, I2C IP UVM 검증, Basys 3 2-board 구동 | `SystemVerilog` `AXI4-Lite` `MicroBlaze` `UVM` `C` | I2C UVM Directed / Random 모두 PASS (Error 0), Functional Coverage 41.7% / 70.8% |
+| [**UART + FIFO Loopback Verification**](https://github.com/ethan000106/UART_FIFO) | `uart_rx → FIFO → uart_tx` 루프백 DUT를 SystemVerilog 클래스 기반 테스트벤치(Generator · Driver · Monitor · Scoreboard)와 SVA(reset · `b_tick`)로 검증 | `SystemVerilog` `SVA` `UART` `FIFO` | 단일 데이터 / 랜덤 / FIFO Full / Assertion 4개 시나리오 확인 |
 
 ### 🎮 Applications
 
@@ -86,14 +86,11 @@
 | [**Integrated Project (Stopwatch & Watch)**](https://github.com/ethan000106/Intergrated-Project) | 스톱워치·시계 모드 통합 시스템 설계. HC-SR04 초음파 인터페이스 FSM 및 Q16 고정소수점 거리 연산 구현 | `SystemVerilog` `Basys3` | *TODO: 측정 오차 범위* |
 
 <!-- TODO
-  1) 링크가 없는 프로젝트(RV32I 5-Stage SoC, AXI4-Lite on MicroBlaze, UART + FIFO)는
-     저장소가 만들어지면 이름에 링크를 걸어주세요.
-     예) | [**UART + FIFO Loopback Verification**](https://github.com/ethan000106/REPO_NAME) | ... |
-  2) Result 열은 면접관이 가장 먼저 보는 칸입니다. 반드시 실측값으로 채우세요.
+  1) Result 열은 면접관이 가장 먼저 보는 칸입니다. 반드시 실측값으로 채우세요.
      - 동작 주파수 / WNS  : Vivado > Report Timing Summary
      - LUT / FF / BRAM    : Vivado > Report Utilization
      - 커버리지            : 시뮬레이터 coverage report
-  3) SPI / I2C 행의 커버리지 수치는 각 저장소의 최신 결과와 일치하는지 확인하세요.
+  2) SPI / I2C 행의 커버리지 수치는 각 저장소의 최신 결과와 일치하는지 확인하세요.
 -->
 
 ---
