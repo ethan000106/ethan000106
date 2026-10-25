@@ -23,8 +23,6 @@
 
 ---
 
-## About
-
 ## 🔗 About
 
 - 🎓 **신소재공학(Advanced Materials Engineering) 전공**: 반도체 물성과 물리적 동작 메커니즘 이해 보유
@@ -40,10 +38,10 @@
 | 영역 | 내용 |
 |:--|:--|
 | **RTL Design** | FSM 기반 제어 로직, 파이프라인 데이터패스, 클럭 도메인 분리 설계 |
-| **Verification** | UVM 환경 구축(Driver / Monitor / Scoreboard), SVA 기반 프로토콜 체크, 커버리지 기반 검증 |
-| **Interface** | UART / SPI / I2C(SCCB) / AXI4-Lite 마스터·슬레이브 직접 구현 |
+| **Verification** | UVM 환경 구축(Driver / Monitor / Scoreboard / Coverage), SystemVerilog 클래스 기반 테스트벤치(mailbox / event), SVA 기반 프로토콜 체크 |
+| **Interface** | UART / SPI / I2C(SCCB) / AMBA APB / AXI4-Lite 마스터·슬레이브 직접 구현 |
 | **Bring-up & Debug** | 합성·타이밍 리포트 해석, ILA 캡처, CDC / 메타스테이빌리티 대응 |
-| **System Integration** | FPGA + 호스트(Python / Jetson) 연동, 카메라 파이프라인 구성 |
+| **System Integration** | MicroBlaze + AXI Interconnect 기반 SoC 통합(Vivado IP 패키징), FPGA + 호스트(Python / Jetson) 연동, 카메라 파이프라인 구성 |
 
 ---
 
@@ -53,32 +51,49 @@
 |:--|:--|
 | **HDL & Verification** | ![SystemVerilog](https://img.shields.io/badge/SystemVerilog-1F2937?style=flat-square) ![Verilog](https://img.shields.io/badge/Verilog-1F2937?style=flat-square) ![UVM](https://img.shields.io/badge/UVM-374151?style=flat-square) ![SVA](https://img.shields.io/badge/SVA-374151?style=flat-square) |
 | **Language** | ![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white) |
-| **EDA & Tools** | ![Vivado](https://img.shields.io/badge/Vivado-0B6C8C?style=flat-square) ![Vitis](https://img.shields.io/badge/Vitis-0B6C8C?style=flat-square) ![Synopsys VCS](https://img.shields.io/badge/Synopsys%20VCS-1F6F5C?style=flat-square) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
-| **Interface** | ![UART](https://img.shields.io/badge/UART-4B5563?style=flat-square) ![SPI](https://img.shields.io/badge/SPI-4B5563?style=flat-square) ![I2C](https://img.shields.io/badge/I2C-4B5563?style=flat-square) ![AXI4-Lite](https://img.shields.io/badge/AXI4--Lite-4B5563?style=flat-square) ![SCCB](https://img.shields.io/badge/SCCB-4B5563?style=flat-square) |
-| **Board / Device** | ![Basys3](https://img.shields.io/badge/Basys3-A855F7?style=flat-square) ![Artix-7](https://img.shields.io/badge/Artix--7-A855F7?style=flat-square) ![Jetson Nano](https://img.shields.io/badge/Jetson%20Nano-76B900?style=flat-square&logo=nvidia&logoColor=white) ![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white) |
+| **EDA & Tools** | ![Vivado](https://img.shields.io/badge/Vivado-0B6C8C?style=flat-square) ![Vitis](https://img.shields.io/badge/Vitis-0B6C8C?style=flat-square) ![Synopsys VCS](https://img.shields.io/badge/Synopsys%20VCS-1F6F5C?style=flat-square) ![Verdi](https://img.shields.io/badge/Verdi-1F6F5C?style=flat-square) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black) |
+| **Interface** | ![UART](https://img.shields.io/badge/UART-4B5563?style=flat-square) ![SPI](https://img.shields.io/badge/SPI-4B5563?style=flat-square) ![I2C](https://img.shields.io/badge/I2C-4B5563?style=flat-square) ![APB](https://img.shields.io/badge/AMBA%20APB-4B5563?style=flat-square) ![AXI4-Lite](https://img.shields.io/badge/AXI4--Lite-4B5563?style=flat-square) ![SCCB](https://img.shields.io/badge/SCCB-4B5563?style=flat-square) |
+| **Board / Device** | ![Basys3](https://img.shields.io/badge/Basys3-A855F7?style=flat-square) ![Artix-7](https://img.shields.io/badge/Artix--7-A855F7?style=flat-square) ![MicroBlaze](https://img.shields.io/badge/MicroBlaze-A855F7?style=flat-square) ![Jetson Nano](https://img.shields.io/badge/Jetson%20Nano-76B900?style=flat-square&logo=nvidia&logoColor=white) ![STM32](https://img.shields.io/badge/STM32-03234B?style=flat-square&logo=stmicroelectronics&logoColor=white) |
 
-<!-- 실제로 다뤄본 툴(Verdi, Design Compiler, PrimeTime 등)이 더 있다면 EDA 행에 추가하고,
+<!-- 실제로 다뤄본 툴(Design Compiler, PrimeTime 등)이 더 있다면 EDA 행에 추가하고,
      경험이 얕은 툴은 빼는 편이 면접에서 안전합니다. -->
 
 ---
 
 ## Projects
 
+### 🧠 Processor & SoC
+
+| Project | Summary | Stack | Result |
+|:--|:--|:--|:--|
+| [**RISC-V RV32I Core**](https://github.com/ethan000106/rv32i_multi) | RV32I **Single-Cycle** 프로세서 설계. 컨트롤 유닛과 데이터패스를 분리한 Harvard 구조, 37개 명령어 구현 및 명령어 type별 시뮬레이션 | `SystemVerilog` `RV32I` | C 프로그램(합산)을 시뮬레이션으로 검증 (`sum = 55`) |
+| **RISC-V 5-Stage Pipeline SoC** <br><sub>4인 팀 · 담당: FND</sub> | 5-stage 파이프라인 RV32I 코어 + AMBA APB(GPIO · UART · FND · RAM) SoC. Forwarding · Load-use stall · Branch 처리, Basys 3 구동 | `SystemVerilog` `RV32I` `AMBA APB` `Basys3` | Single-Cycle 대비 **Fmax 51.06 → 91.27 MHz (≈1.79×)**, CPI 1.0 → 1.402, 실효 성능 ≈1.275× |
+
+### 🔌 Communication IP & Verification
+
+| Project | Summary | Stack | Result |
+|:--|:--|:--|:--|
+| [**I2C Master Design & UVM Verification**](https://github.com/ethan000106/I2C_System) | I2C Master IP 설계(START/STOP · ACK 처리, SCL 100 kHz 클럭 분주). UVM 기반 검증 환경 구축 및 Directed / Random 검증 | `SystemVerilog` `UVM` `I2C` | Scoreboard PASS (Error 0), Functional Coverage 40.00% |
+| [**SPI Master Design & UVM Verification**](https://github.com/ethan000106/SPI_System) | SPI Master / Slave IP 설계(4-Mode CPOL/CPHA 지원). UVM 기반 검증 환경 구축 및 Directed / Random 검증 | `SystemVerilog` `UVM` `SPI` | Scoreboard PASS (Error 0), Functional Coverage 59.38% (Random) |
+| **AXI4-Lite SPI / I2C IP on MicroBlaze** <br><sub>2인 팀</sub> | SPI · I2C Master를 AXI4-Lite 슬레이브 IP로 패키징하고 MicroBlaze + AXI Interconnect SoC에 통합. AXI Master/Slave 핸드셰이크 FSM 설계, I2C IP UVM 검증, Basys 3 2-board 구동 | `SystemVerilog` `AXI4-Lite` `MicroBlaze` `UVM` `C` | I2C UVM Directed / Random 모두 PASS (Error 0), Functional Coverage 41.7% / 70.8% |
+| **UART + FIFO Loopback Verification** | `uart_rx → FIFO → uart_tx` 루프백 DUT를 SystemVerilog 클래스 기반 테스트벤치(Generator · Driver · Monitor · Scoreboard)와 SVA(reset · `b_tick`)로 검증 | `SystemVerilog` `SVA` `UART` `FIFO` | 단일 데이터 / 랜덤 / FIFO Full / Assertion 4개 시나리오 확인 |
+
+### 🎮 Applications
+
 | Project | Summary | Stack | Result |
 |:--|:--|:--|:--|
 | [**FPGA Whack-a-Mole Game**](https://github.com/ethan000106/team_project_dudeoji) | 2-board FPGA 시스템. UART 패킷 통신 기반 게임 로직 FSM 설계, OV7670 카메라 HSV 색 검출로 타격 판정 구현 | `SystemVerilog` `UART` `VGA` `OpenCV` | *TODO: 동작 클럭 / LUT·FF·BRAM 사용률* |
-| [**I2C Master Design & UVM Verification**](https://github.com/ethan000106/I2C_System) | I2C Master IP 설계(START/STOP·ACK 처리, 클럭 분주). UVM 기반 검증 환경 구축 및 코너 케이스 검증 | `SystemVerilog` `UVM` `I2C` | *TODO: 코드 / 기능 커버리지 %* |
-| [**SPI Master Design & UVM Verification**](https://github.com/ethan000106/SPI_System) | SPI Master IP 설계(4-Mode CPOL/CPHA 지원). UVM 기반 검증 환경 구축 및 랜덤 시나리오 검증 | `SystemVerilog` `UVM` `SPI` | *TODO: 코드 / 기능 커버리지 %* |
-| [**RISC-V RV32I Core**](https://github.com/ethan000106/rv32i_multi) | RV32I 명령어 셋 기반 Multi-Cycle 프로세서 설계. 컨트롤 유닛 FSM 및 데이터패스 구현 | `SystemVerilog` `RV32I` | *TODO: 최대 동작 주파수 / CPI* |
 | [**Integrated Project (Stopwatch & Watch)**](https://github.com/ethan000106/Intergrated-Project) | 스톱워치·시계 모드 통합 시스템 설계. HC-SR04 초음파 인터페이스 FSM 및 Q16 고정소수점 거리 연산 구현 | `SystemVerilog` `Basys3` | *TODO: 측정 오차 범위* |
 
 <!-- TODO
-  1) 각 프로젝트 이름에 저장소 링크를 걸어주세요.
-     예) | [**FPGA Whack-a-Mole**](https://github.com/ethan000106/REPO_NAME) | ... |
+  1) 링크가 없는 프로젝트(RV32I 5-Stage SoC, AXI4-Lite on MicroBlaze, UART + FIFO)는
+     저장소가 만들어지면 이름에 링크를 걸어주세요.
+     예) | [**UART + FIFO Loopback Verification**](https://github.com/ethan000106/REPO_NAME) | ... |
   2) Result 열은 면접관이 가장 먼저 보는 칸입니다. 반드시 실측값으로 채우세요.
      - 동작 주파수 / WNS  : Vivado > Report Timing Summary
      - LUT / FF / BRAM    : Vivado > Report Utilization
      - 커버리지            : 시뮬레이터 coverage report
+  3) SPI / I2C 행의 커버리지 수치는 각 저장소의 최신 결과와 일치하는지 확인하세요.
 -->
 
 ---
@@ -90,6 +105,7 @@
 
 | Symptom | Root Cause | Fix |
 |:--|:--|:--|
+| SPI Slave에서 SCK 엣지가 간헐적으로 누락 | 비동기 SCK를 클럭이 아닌 **데이터 입력**으로 받아 동기화 · 엣지 검출하는 CDC 경로에서 엣지를 놓침 | 2-stage synchronizer와 edge-detect FF를 분리 |
 | 특정 조건에서 FSM이 멈춤 | `default` 미정의로 illegal state 진입 후 복귀 불가 | 전체 상태 인코딩 + `default` 복귀 경로 추가 |
 | 이벤트가 여러 번 트리거됨 | level 신호를 edge 조건처럼 사용 | 1-cycle pulse 생성 로직으로 변경 |
 | 통신 중 패킷이 간헐적으로 유실 | checksum 불일치 시 재동기화 미구현 | RX FSM에 resync 상태 추가 |
@@ -123,6 +139,7 @@ flowchart LR
 
 ![AXI4 Full](https://img.shields.io/badge/AXI4%20Full-4B5563?style=flat-square)
 ![CDC](https://img.shields.io/badge/CDC%20Handling-4B5563?style=flat-square)
+![Coverage](https://img.shields.io/badge/Functional%20Coverage%20Closure-4B5563?style=flat-square)
 ![DFT](https://img.shields.io/badge/DFT%20·%20MBIST%2FBIRA%2FBISR-4B5563?style=flat-square)
 ![STA](https://img.shields.io/badge/Static%20Timing%20Analysis-4B5563?style=flat-square)
 
